@@ -337,3 +337,10 @@ sys_sigaction(int signo, userptr<struct sigaction> act, userptr<struct sigaction
     return -1;
   return 0;
 }
+
+//SYSCALL
+int
+sys_has_secrets(void)
+{
+  return mycpu()->has_secrets;
+}
